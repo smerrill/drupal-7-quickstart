@@ -31,7 +31,7 @@ fi
 
 # We always have a settings.php, so instead check for a system table to see if
 # Drupal is installed.
-if [ ! `drush sqlq "SHOW TABLES LIKE '%system'" | grep -q system` ]
+if ! drush sqlq "SHOW TABLES" | egrep -q ^system
 then
   if ! drush site-install standard --site-name=${OPENSHIFT_APP_NAME} --sites-subdir=default --account-pass=openshift_changeme --yes
   then
