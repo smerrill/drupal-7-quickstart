@@ -33,7 +33,7 @@ fi
 # Drupal is installed.
 if [ ! `drush sqlq "SHOW TABLES LIKE '%system'" | grep -q system` ]
 then
-  if ! drush site-install standard --site-name=${OPENSHIFT_APP_NAME} --account-pass=openshift_changeme --yes
+  if ! drush site-install standard --site-name=${OPENSHIFT_APP_NAME} --sites-subdir=default --account-pass=openshift_changeme --yes
   then
     echo "Unable to configure your Drupal installation"
     echo
