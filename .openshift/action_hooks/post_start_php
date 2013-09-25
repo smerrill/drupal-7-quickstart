@@ -6,3 +6,6 @@ for site in `find ${OPENSHIFT_REPO_DIR}php/sites -maxdepth 1 -mindepth 1 -type d
   chmod ugo-wX $site
   chmod ugo-wX $site/settings.php
 done
+
+# It is okay if these fail.
+exit 0
