@@ -4,7 +4,7 @@
 # up again.  This script gets executed directly, so it could be python, php,
 # ruby, etc.
 
-set -e
+set -xe
 
 DRUPAL_SITE_DIR=${OPENSHIFT_REPO_DIR}php/sites
 
