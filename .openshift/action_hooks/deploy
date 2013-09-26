@@ -8,6 +8,8 @@ set -e
 
 DRUPAL_SITE_DIR=${OPENSHIFT_REPO_DIR}php/sites
 
+source $OPENSHIFT_CARTRIDGE_SDK_BASH
+
 #
 # Automatic installation only works with mysql.
 # 
@@ -47,4 +49,7 @@ then
   echo "  Drupal-Admin password: openshift_changeme"
   echo "  Don't forget to change your drupal admin password!"
   echo "===================================================="
+  client_error "Log into Drupal with user admin and password openshift_changeme."
+  client_result "Log into Drupal with user admin and password openshift_changeme."
+  client_message "Log into Drupal with user admin and password openshift_changeme."
 fi
