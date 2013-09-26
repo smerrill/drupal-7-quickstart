@@ -4,7 +4,7 @@
 # up again.  This script gets executed directly, so it could be python, php,
 # ruby, etc.
 
-set -xe
+set -e
 
 DRUPAL_SITE_DIR=${OPENSHIFT_REPO_DIR}php/sites
 
@@ -39,13 +39,12 @@ then
     echo
     exit 10
   fi
+  echo
+  echo "Drupal is now configured"
+  echo
+  echo "===================================================="
+  echo "  Drupal-Admin login: admin"
+  echo "  Drupal-Admin password: openshift_changeme"
+  echo "  Don't forget to change your drupal admin password!"
+  echo "===================================================="
 fi
-
-echo
-echo "Drupal is now configured"
-echo
-echo "===================================================="
-echo "  Drupal-Admin login: admin"
-echo "  Drupal-Admin password: openshift_changeme"
-echo "  Don't forget to change your drupal admin password!"
-echo "===================================================="
